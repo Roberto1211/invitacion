@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>Invitación Isabella</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/qrious@4.0.2/dist/qrious.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Estás invitado</h1>
+          <h2>Al mágico cumpleaños de <span class="nombre">Isabella</span></h2>
+
+          <p class="mensaje">
+            "Una historia tan antigua como el tiempo...<br />
+            Ven a celebrar un día lleno de magia, rosas encantadas y sueños"
+          </p>
+        </div>
+      </section>
+
+      <section class="imagen-principal">
+        <img src="./assets/imagen_6.jpg" />
+      </section>
+
+      <section class="detalles">
+        <div class="card">
+          <div class="card-img">
+            <img src="./assets/imagen_5.jpg" />
+          </div>
+
+          <div class="card-info">
+            <h3>Lugar</h3>
+            <p>Westin Camino Real</p>
+            <p>Salón : la terraza</p>
+            <p>12:00 pm</p>
+            <a href="https://maps.app.goo.gl/vRDG5Ut4TRi6ae198" target="_blank">
+              📍 Ver en mapa
+            </a>
+          </div>
+        </div>
+
+        <div class="card card-separada">
+          <div class="card-info">
+            <h3>👗 Código</h3>
+            <p>Elegante</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="imagen-principal">
+        <img src="./assets/imagen_4.jpg" />
+      </section>
+
+      <section class="galeria">
+        <h2>✨ Un mundo encantado te espera ✨</h2>
+
+        <div class="imagenes">
+          <img src="./assets/imagen_3.jpg" />
+          <img src="./assets/imagen_2.jpg" />
+          <img src="./assets/imagen_1.jpg" />
+        </div>
+      </section>
+
+      <footer class="footer" style="margin-top: 30px">
+        <button onclick="abrirModal()">Confirmar asistencia</button>
+      </footer>
+    </div>
+
+    <div id="modal" class="modal-backdrop hidden">
+      <div class="modal">
+        <h2>Confirmar Asistencia</h2>
+
+        <div id="form-container">
+          <input id="nombre" type="text" placeholder="Tu nombre" />
+
+          <div class="acciones">
+            <button onclick="generarQR()">Generar</button>
+            <button onclick="cerrarModal()">Cancelar</button>
+          </div>
+        </div>
+
+        <div id="qr-container" class="hidden">
+        <canvas id="qrcode"></canvas>
+
+        <div id="qr-acciones" class="acciones hidden">
+            <button onclick="descargarQR()">Descargar</button>
+            <button onclick="cerrarModal()" style="margin-left: auto">
+            Cancelar
+            </button>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
